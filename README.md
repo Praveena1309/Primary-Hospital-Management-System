@@ -5,8 +5,8 @@ SAME SCREENSHOTS
 
 <img width="1133" alt="Screenshot 2024-07-10 at 2 44 10 PM" src="https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/62c2c0fa-9f20-424c-82c8-8eef6ebc1ca7">
 
-![1](https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/24f40fe0-cf57-41e3-a6a1-d784d17ccfca)
+<img width="1030" alt="Screenshot 2024-07-10 at 2 47 34 PM" src="https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/e7e1cf36-e800-4b52-bc9f-1d72fb2e4f81">
 
-![2](https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/d9e5277d-e793-4c42-ac0d-a49db9fb9bd3)
+<img width="1039" alt="Screenshot 2024-07-10 at 2 47 57 PM" src="https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/067d4cdf-d6e2-4f82-9b43-b523ecdaacbf">
 
-![3](https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/09eafcb9-315f-4bae-837f-b59fbf0307ec)
+<img width="1063" alt="Screenshot 2024-07-10 at 2 48 08 PM" src="https://github.com/Praveena1309/Primary-Hospital-Management-System/assets/121342359/bd4edabd-cbf7-4132-b8bb-6314e46149a2">
