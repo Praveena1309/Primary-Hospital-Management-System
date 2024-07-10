@@ -1,0 +1,196 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/doctor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:51 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>Primary Health Center</title>
+
+    	<!-- Favicon -->
+
+    	<link rel="shortcut icon" type="image/x-icon" href="{% static 'HealthStack-System/images/Normal/PHCLOGO.jpeg' %}"/>
+
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'HealthStack-System/css/Normal/bootstrap.min.css' %}"> 
+		
+		<!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="{% static 'HealthStack-System/plugins/Normal/fontawesome/css/fontawesome.min.css' %}">
+		
+		<!-- Feathericon CSS -->
+        <link rel="stylesheet" href="{% static 'HealthStack-System/admin_assets/css/feathericon.min.css'%}">
+		
+		<!-- Datatables CSS -->
+		<link rel="stylesheet" href="{% static 'HealthStack-System/plugins/Normal/fontawesome/css/all.min.css' %}"> 
+		
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'HealthStack-System/css/admin/style.css'%}"> 
+		
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+    </head>
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+		
+			<!-- Header -->
+            <div class="main-wrapper">
+				<header class="header">{% include 'hospital_admin/hospital-admin-navbar.html' %}</header>
+			<!-- /Header -->
+			
+			<!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+				{% include 'hospital_admin/hospital-admin-sidebar.html' %} </aside>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3 class="page-title">Pharmacy Details</h3>
+								
+								{% include 'message.html' %}
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					<div class="tab-content pt-0">
+                        <!-- Appointment Tab -->
+                        <div
+                          id="pat_appointments"
+                          class="tab-pane fade show active"
+                        >
+                          <div class="card card-table mb-0">
+                            <div class="card-body">
+                              <div class="table-responsive">
+                                <table class="table table-hover table-center mb-0 text-center">
+                                  <thead>
+                                    <tr>
+                                      <th>Token ID</th>
+                                      <th>Patient ID</th>
+                                      <th>Patient Name</th>
+    
+                                      <!-- <th>Attachment</th> -->
+                                      <th>Doctor</th>
+                                      <th>Date</th>
+                                      <th>Pharmacy Status</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for prescription in prescription %}
+                                    <tr>
+                                      <td>
+                                        <a href="javascript:void(0);">TKID0{{prescription.prescription_id}}</a>
+                                      </td>
+                                      <td>{{prescription.patient_id }}</td>
+                                      <td>{{prescription.patient.name }}</td>
+                                      
+    
+                                      <!-- <td><a href="#">dental-test.pdf</a></td> -->
+    
+                                   
+    
+                                      <td>
+                                        <h2 class="table-avatar">
+                                          <a
+                                            href="doctor-profile.html"
+                                            class="avatar avatar-sm mr-2"
+                                          >
+                                            <img
+                                              class="avatar-img rounded-circle"
+                                              src="{{prescription.doctor.featured_image.url }}"
+                                              alt="User Image"
+                                            />
+                                          </a>
+                                          <a href="doctor-profile.html"
+                                            >Dr. {{prescription.doctor}}<span>{{prescription.doctor.department_name }}</span></a
+                                          >
+                                        </h2>
+                                      </td>
+                                      <td>{{prescription.create_date }}</td>
+                                      <td>{{prescription.status }}</td>
+                                      <td>
+                                        <div class="table-action">
+                                          <a
+                                            href="{% url 'prescription_view_admin' pk=prescription.prescription_id%}"
+                                            class="btn btn-sm bg-info-light"
+                                          >
+                                            <i class="far fa-eye"></i> View
+                                          </a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Appointment Tab -->
+    
+                        <!-- Prescription Tab -->
+                        <div class="tab-pane fade" id="pat_prescriptions">
+                          <div class="card card-table mb-0">
+                            <div class="card-body">
+                              <div class="table-responsive">
+                              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Prescription Tab -->
+    
+                        <!-- medical record -->
+                     
+                        <!-- /Medical Records Tab -->
+    
+                        <!-- Billing Tab -->
+                    
+                        <!-- /Billing Tab -->
+                      </div>
+			<!-- /Page Wrapper -->
+		
+        </div>
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+        <script src="{% static 'HealthStack-System/js/admin/jquery-3.2.1.min.js' %}"></script> 
+		
+		<!-- Bootstrap Core JS -->
+        <script src="{% static 'HealthStack-System/js/admin/popper.min.js' %}"></script> 
+        <script src="{% static 'HealthStack-System/js/admin/bootstrap.min.js' %}"></script> 
+		
+		<!-- Slimscroll JS -->
+        <script src="{% static 'HealthStack-System/plugins/admin/slimscroll/jquery.slimscroll.min.js' %}"></script>
+		
+		<!-- Datatables JS -->
+		<script src="{% static 'HealthStack-System/plugins/admin/datatables/jquery.dataTables.min.js'%}"></script> 
+		<script src="{% static 'HealthStack-System/plugins/admin/datatables/datatables.min.js'%}"></script>
+		
+		<!-- Custom JS -->
+		<script src="{% static 'HealthStack-System/js/admin/script.js' %}"></script>
+
+		{% if messages %}
+		<script>
+			{% for message in messages %}
+				$(document).ready(function () {
+					$('.toast').toast('show');
+				});
+			{% endfor %}
+		</script>
+	  {% endif %}
+		
+    </body>
+
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/doctor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:51 GMT -->
+</html>
